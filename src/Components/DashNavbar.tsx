@@ -6,6 +6,7 @@ import { FiLogOut, FiEdit, FiEdit2 } from 'react-icons/fi'
 import { useAuth } from '../contexts/AuthContext'
 import { Link, useNavigate } from 'react-router-dom'
 import { useToast, EToastTypes } from '../contexts/ToastContext'
+import logoWhite from '../assets/circular-white.png'
 
 function classNames(...classes: Array<string>) {
   return classes.filter(Boolean).join(' ')
@@ -91,7 +92,7 @@ export default function DashNavbar() {
                   />
                   <img
                     className="hidden h-8 w-auto lg:block"
-                    src="../assets/circular.png"
+                    src={logoWhite}
                     alt="Circular Estudios"
                   />
                 </div>
