@@ -7,6 +7,7 @@ import { useAuth } from '../contexts/AuthContext'
 import { Link, useNavigate } from 'react-router-dom'
 import { useToast, EToastTypes } from '../contexts/ToastContext'
 import logoWhite from '../assets/circular-white.png'
+import logo from '../assets/circular-white.png'
 
 function classNames(...classes: Array<string>) {
   return classes.filter(Boolean).join(' ')
@@ -87,7 +88,7 @@ export default function DashNavbar() {
                 <div className="flex flex-shrink-0 items-center">
                   <img
                     className="block h-8 w-auto lg:hidden"
-                    src="../assets/circular.png"
+                    src={logo}
                     alt="Circular Estudios"
                   />
                   <img
