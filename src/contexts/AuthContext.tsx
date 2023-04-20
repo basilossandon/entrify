@@ -5,6 +5,7 @@ import {
   signInWithPopup,
   GithubAuthProvider,
 } from 'firebase/auth'
+import {loginEmailAndPassword} from '../api/auth';
 
 interface IAuthProviderProps {
   children: JSX.Element
@@ -35,7 +36,7 @@ export function AuthProvider({ children }: IAuthProviderProps): JSX.Element {
   }
 
   function login(email: string, password: string): Promise<any> {
-    return auth.signInWithEmailAndPassword(email, password)
+    return loginEmailAndPassword(email, password)
   }
 
   function logout(): Promise<any> {
